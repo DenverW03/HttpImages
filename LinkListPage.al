@@ -6,6 +6,7 @@ page 50101 "Link List Page"
     UsageCategory = Lists;
 
     SourceTable = "Link Table";
+    CardPageId = "Link Card";
 
     layout
     {
@@ -30,5 +31,17 @@ page 50101 "Link List Page"
             }
         }
 
+        area(FactBoxes)
+        {
+        }
+
     }
+
+    // This should return a blob type that is a raw data representation of the image to display
+    local procedure GetBlobData()
+    var
+
+    begin
+
+    end;
 }

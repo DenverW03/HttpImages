@@ -31,4 +31,12 @@ table 50100 "Link Table"
             DataClassification = ToBeClassified;
         }
     }
+
+    keys
+    {
+        key(PK; "Link ID")
+        {
+            Clustered = true;
+        }
+    }
 }
