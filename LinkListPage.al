@@ -28,16 +28,12 @@ page 50101 "Link List Page"
                 {
                     ApplicationArea = All;
                 }
-
                 field("Image"; )
-            }
-            }
+                {
 
-        area(FactBoxes)
-        {
-
+                }
+            }
         }
-
     }
 
     // Method to set the blob image
@@ -75,6 +71,7 @@ table 50103 BlobTable
         field(2; "Image Data"; Blob)
         {
             DataClassification = ToBeClassified;
+            Subtype = Bitmap;
         }
     }
 }
