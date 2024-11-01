@@ -28,20 +28,53 @@ page 50101 "Link List Page"
                 {
                     ApplicationArea = All;
                 }
+
+                field("Image"; )
             }
-        }
+            }
 
         area(FactBoxes)
         {
+
         }
 
     }
 
-    // This should return a blob type that is a raw data representation of the image to display
-    local procedure GetBlobData()
+    // Method to set the blob image
+    local procedure SetImage()
     var
 
     begin
 
     end;
+
+    // This should return a blob type that is a raw data representation of the image to display
+    local procedure GetBlobData()
+    var
+        InStream: InStream; // Reads from a Blob stream
+    begin
+
+    end;
+}
+
+// Table to be used as a temporary table to hold the BLOB image in memory
+table 50103 BlobTable
+{
+    DataClassification = ToBeClassified;
+    TableType = Temporary;
+    fields
+    {
+        // Relation to the Link ID of the LinkTable
+        field(1; "Link ID"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            NotBlank = true;
+        }
+
+        // The blob data field
+        field(2; "Image Data"; Blob)
+        {
+            DataClassification = ToBeClassified;
+        }
+    }
 }

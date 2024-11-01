@@ -14,12 +14,14 @@ table 50100 "Link Table"
         field(1; "Link ID"; Code[10])
         {
             DataClassification = ToBeClassified;
+            NotBlank = true;
         }
 
         // Item ID - relation to item table by Item No.
         field(2; "Item ID"; Code[20])
         {
             DataClassification = ToBeClassified;
+            NotBlank = true;
 
             // The relation to the item No. field
             TableRelation = Item."No.";
